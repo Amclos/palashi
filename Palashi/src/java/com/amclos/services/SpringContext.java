@@ -14,12 +14,16 @@ public class SpringContext {
     private final static String CONFIG_FILE = "applicationContext.xml";
 
     public static SpringContext getInstance() {
+        try{
         if (null == instance) {
             instance = new SpringContext();
             context = new ClassPathXmlApplicationContext(CONFIG_FILE);
         }
         for(int i = 0 ; i < context.getBeanDefinitionNames().length ; i++){
             System.out.println(context.getBeanDefinitionNames()[i]);
+        }
+        }catch(Exception e){
+            e.printStackTrace();
         }
         return instance;
     }

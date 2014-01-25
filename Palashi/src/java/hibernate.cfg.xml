@@ -7,5 +7,6 @@
     <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
     <property name="hibernate.connection.username">palashi</property>
     <property name="hibernate.connection.password">palashi</property>
+    <mapping class="com.amclos.model.Empleado" />
   </session-factory>
 </hibernate-configuration>
